@@ -1,0 +1,22 @@
+<!doctype <html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div>
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        </div>
+        {% endif %}
+    {% endwith %}
+
+    {% block head %} put your head content here {% endblock %}
+</head>
+
+<body>
+    {% block content %} put your body content here {% endblock %}
+</body>
+</html>
